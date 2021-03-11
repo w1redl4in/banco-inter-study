@@ -24,7 +24,6 @@ export const AppThemeProvider = ({ children }: PropsWithChildren<unknown>) => {
     setCurrentTheme((prevTheme) => {
       const newTheme = prevTheme === 'light' ? 'dark' : 'light';
       return newTheme;
-      // localStorage.setItem()
     });
   }, []);
 
