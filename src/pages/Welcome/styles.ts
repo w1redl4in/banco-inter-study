@@ -1,5 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const WelcomeContainer = styled.div`
-  height: 100vh;
+  ${({ theme }) => css`
+    height: 100vh;
+    background: ${theme.colors.primary};
+  `}
 `;

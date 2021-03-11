@@ -1,5 +1,7 @@
+import { WelcomeContainer } from './styles';
+
 const Welcome: React.FC = () => {
-  return <h1>Welcome</h1>;
+  return <WelcomeContainer>Welcoeme</WelcomeContainer>;
 };
 
 export default Welcome;
