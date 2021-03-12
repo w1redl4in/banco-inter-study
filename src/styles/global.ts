@@ -39,6 +39,7 @@ const GlobalStyles = createGlobalStyle`
   body, input, button {
     font: 1.6rem 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     line-height: 1.48;
+    outline: 0;
   }
 
   h1, h2, h3, h4, h5, h6, strong {
