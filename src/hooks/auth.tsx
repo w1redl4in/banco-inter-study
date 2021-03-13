@@ -17,7 +17,9 @@ export type AuthContext = {
 
 const AuthContext = createContext<AuthContext | null>(null);
 
-const AuthContextProvider = ({ children }: PropsWithChildren<unknown>) => {
+export const AuthContextProvider = ({
+  children,
+}: PropsWithChildren<unknown>) => {
   const [currentUser, setCurrentUser] = useState<User>('');
 
   const signIn = useCallback((name: string) => {
@@ -35,12 +37,12 @@ const AuthContextProvider = ({ children }: PropsWithChildren<unknown>) => {
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 
-const useAuthHook = () => {
+export const useAuthHook = (): AuthContext => {
   const context = useContext(AuthContext);
 
   if (!context) {
     throw new Error(`useAuthHook must be used within an AuthContextProvider`);
   }
-};
 
-export { useAuthHook, AuthContextProvider };
+  return context;
+};
